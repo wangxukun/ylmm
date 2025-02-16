@@ -17,12 +17,12 @@ export default function Header() {
               height={40} // 图片高度
               className="rounded-full" // 可选：将图片设置为圆形
             />
-            <span className="text-xl font-bold leading-tight text-gray-700">
+            <span className="text-xl text-slate-500 font-bold leading-tight">
               远路漫漫播客
             </span>
           </div>
           {/* 右侧：按钮组 */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 text-sm">
             {/* 全局搜索按钮 */}
             <button className="flex items-center space-x-2 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
               <svg
@@ -37,7 +37,7 @@ export default function Header() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="hidden sm:inline text-gray-700">搜索</span>
+              <span className="hidden sm:inline text-slate-600">搜索</span>
             </button>
 
             {/* 登录按钮 */}
@@ -54,7 +54,7 @@ export default function Header() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-gray-700 hidden sm:inline">登录</span>
+              <span className="text-slate-500 hidden sm:inline">登录</span>
             </button>
           </div>
         </div>

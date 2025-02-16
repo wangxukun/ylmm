@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +30,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="pt-12">
-          {" "}
-          {/* 这里的 pt-12 是为了给 Header 留出空间 */}
+        <div className="bg-white pt-16 min-h-screen">
+          {/* 这里的 pt-16 是为了给 Header 留出空间 */}
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

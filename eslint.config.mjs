@@ -6,6 +6,9 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  {
+    ignores: ["**/node_modules/**", "**/dist/**", "**/public/static/images/**"],
+  },
   // 基础文件匹配
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
 
@@ -34,7 +37,6 @@ export default [
       "react/jsx-uses-react": "off", // 关闭旧规则
     },
   },
-
   // Prettier 兼容（必须放在最后）
   eslintConfigPrettier,
 ];
