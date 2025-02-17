@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image"; // 引入 Next.js 的 Image 组件
+import Link from "next/link"; // 引入 Next.js 的 Link 组件
 
 export default function Header() {
   return (
@@ -9,18 +10,20 @@ export default function Header() {
           {" "}
           {/* 使用 justify-between 实现左右对齐 */}
           {/* 左侧：LOGO 和网站标题 */}
-          <div className="flex items-center space-x-4">
-            <Image
-              src="/static/images/logo.png" // 图片路径
-              alt="远路漫漫播客 Logo" // 替代文本
-              width={40} // 图片宽度
-              height={40} // 图片高度
-              className="rounded-full" // 可选：将图片设置为圆形
-            />
-            <span className="text-xl text-slate-500 font-bold leading-tight">
-              远路漫漫播客
-            </span>
-          </div>
+          <Link href="http://localhost:3000/" passHref>
+            <div className="flex items-center space-x-4">
+              <Image
+                src="/static/images/logo.png" // 图片路径
+                alt="远路漫漫播客 Logo" // 替代文本
+                width={40} // 图片宽度
+                height={40} // 图片高度
+                className="rounded-full" // 可选：将图片设置为圆形
+              />
+              <span className="text-xl text-slate-500 font-bold leading-tight">
+                远路漫漫播客
+              </span>
+            </div>
+          </Link>
           {/* 右侧：按钮组 */}
           <div className="flex items-center space-x-4 text-sm">
             {/* 全局搜索按钮 */}
